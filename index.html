@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>do it</title>
+    <style>
+        .flex {
+            display: flex;
+        }
+        .flex1 {
+            flex: 1;
+        }
+        .column {
+            flex-direction: column;
+        }
+        .k1{
+            width: 500px;
+            height: 60px;
+        }
+        .k2{
+            width: 160px;
+            height: 50px;
+        }
+    </style>
+
+    <script>
+        function goToUrl(id){
+            var m_url = "http://music.163.com/song/media/outer/url?id=" + encodeURIComponent(document.getElementById(id).value) + ".mp3";
+            window.location.href = m_url;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="flex flex1 column" style="align-items: center; padding: 20px">
+        <br><p>--</p>
+        <input class="k1" type='text' style="text-align: center" id="id" placeholder='id'>
+        <br>
+
+        <div>
+            <button class="k2" onclick="goToUrl('id')">跳转</button>
+        </div>
+    </div>
+
+</body>
+</html>
